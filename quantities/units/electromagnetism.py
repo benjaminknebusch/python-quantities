@@ -137,12 +137,30 @@ pF = UnitQuantity(
     nF/1000,
     symbol='pF'
 )
+fF = UnitQuantity(
+    'femtofarad',
+    pF/1000,
+    symbol='fF'
+)
+aF = UnitQuantity(
+    'attofarad',
+    fF/1000,
+    symbol='aF'
+)
+
 ohm = Ohm = UnitQuantity(
     'ohm',
     V/A,
     u_symbol='Ω',
     aliases=['ohms', 'Ohm']
 )
+mOhm = UnitQuantity(
+    'milliohm',
+    ohm/1000,
+    u_symbol="mΩ",
+    aliases=['mOhm', 'mohm', 'milliohms']
+)
+
 kOhm = UnitQuantity(
     'kiloohm',
     ohm*1000,
@@ -197,6 +215,26 @@ H = henry = UnitQuantity(
     'henry',
     Wb/A,
     symbol='H'
+)
+
+
+mH = millihenry = UnitQuantity(
+    'millihenry',
+    henry*1e-3,
+    symbol="mH"
+)
+
+uH = microhenry = UnitQuantity(
+    'microhenry',
+    henry*1e-6,
+    symbol="uH",
+    u_symbol='μH'
+)
+
+nH = nanohenry = UnitQuantity(
+    'nanohenry',
+    henry*1e-9,
+    symbol="nH"
 )
 abfarad = UnitQuantity(
     'abfarad',
